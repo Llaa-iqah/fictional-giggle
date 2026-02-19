@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000;
+    margin: 0;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("C:/Users/Naidy/OneDrive/Documents/fnb/websites fnb/coursera notes/projects/form login/smoke bg.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: animate 5s linear infinite;
+
+}
+
+@keyframes animate {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.login-box {
+    position: relative;
+    width: 400px;
+    min-height: 420px;
+    height: auto;
+    background: transparent;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 28px 24px; /* keep content inside the box */
+        backdrop-filter: blur(10px); /* add blur effect */
+        border: 2px solid rgba(255, 255, 255, 0.3); /* optional: add a subtle border */
+    
+}
+
+.form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+    margin: 0 0 18px 0;
+    line-height: 1;
+}
+
+.input-box {
+    width: 310px;
+    margin: 35px 0;
+    border-bottom: 2px solid #fff ;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-box label {
+    position: absolute;
+    left: 8px;
+    top: 12px; /* start inside the input */
+    font-size: 1em;
+    color: rgba(255,255,255,0.85);
+    pointer-events: none;
+    transition: .25s ease;
+}
+
+.input-box input:focus ~ label,
+.input-box input:not(:placeholder-shown) ~ label {
+    top: -22px; /* float above when focused or filled */
+    font-size: 0.85em;
+    color: #fff;
+}
+
+.input-box input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    padding: 12px 35px 0 5px; /* leave space for the label inside */
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #fff;
+    line-height: 57px ;
+}
+
+.remember-forgot {
+    margin: 20px 0 25px;
+    font-size: .9em;
+    color: #fff;
+    display: flex  ;
+    justify-content: space-between;
+    width: 310px;
+}
+
+.remember-forgot label input {
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 310px;
+    height: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 40px;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.register-link {
+    margin: 25px 0 10px;
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+}
+
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}   
+
+@media (max-width: 450px) {
+    .login-box {
+        width: 100%;
+        height: 100vh;
+        border: none;
+        border-radius: 0;
+    }
+
+    .input-box {
+        width: 290px;
+    }
+
+    .remember-forgot {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
