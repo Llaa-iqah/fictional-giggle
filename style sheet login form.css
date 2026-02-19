@@ -22,7 +22,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("C:/Users/Naidy/OneDrive/Documents/fnb/websites fnb/coursera notes/projects/form login/smoke bg.png") no-repeat;
+    background: url("smoke_bg.png") no-repeat;
     background-size: cover;
     background-position: center;
     animation: animate 5s linear infinite;
@@ -185,4 +185,5 @@ button {
     button {
         width: 100%;
     }
+
 }
